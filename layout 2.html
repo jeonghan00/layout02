@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 2 - Clean</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: grid;
+      width: 80%;
+      height: 80%;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr 220px;
+      grid-template-rows: 80px 1fr 60px;
+      grid-template-areas: 
+        "header header sidebar"
+        "left   middle sidebar"
+        "footer footer footer";
+    }
+
+    .box { border-radius: 8px; }
+    .header  { grid-area: header;  background: #cd5aba; }
+    .left    { grid-area: left;    background: #924876; }
+    .middle  { grid-area: middle;  background: #a05396; }
+    .sidebar { grid-area: sidebar; background: #a72e74; }
+    .footer  { grid-area: footer;  background: #480f69; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box header"></div>
+    <div class="box left"></div>
+    <div class="box middle"></div>
+    <div class="box sidebar"></div>
+    <div class="box footer"></div>
+  </div>
+</body>
+</html>
+
